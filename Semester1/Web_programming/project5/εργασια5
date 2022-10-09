@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<style>
+				table {
+					border:solid blue;
+				}
+				td {
+					padding: 12px;
+				}
+			</style>
+		</head>
+		<body>
+			<table>
+				<?php
+					function minima($mnm){
+						echo("<script type='text/javascript'> var apantisi = prompt('".$mnm."'); </script>");
+						$apantisi = "<script type='text/javascript'> document.write(apantisi); </script>";
+						return($apantisi);
+					}
+					$mnm = "Εισάγετε έναν χαρακτήρα";
+					$onoma = minima($mnm);
+					$ejodos =  "".$onoma."";
+				?>
+				<?php
+					echo '<h1>Ο παρακάτω πίνακας χρησιμοποιεί βρόχους επανάληψης:</h1>';
+					for ($j=1;$j<=5;$j++){
+						for($i=0;$i < 1;$i++){
+							$xrwma = "red";
+							echo "<tr style='background-color: ". $xrwma .";'>
+							<td>$ejodos</td><td>$ejodos</td><td>$ejodos</td><td>
+							$ejodos</td><td>$ejodos</td><td>$ejodos</td><td>$ejodos</td><td>
+							$ejodos</td><td>$ejodos</td><td>$ejodos</td></tr>";
+						}
+						for($i=0;$i < 1;$i++){
+							$xrwma = "green";
+							echo "<tr style='background-color: ". $xrwma .";'><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>";
+						}
+					}
+				 ?> 
+			</table>
+		</body>
+</html>

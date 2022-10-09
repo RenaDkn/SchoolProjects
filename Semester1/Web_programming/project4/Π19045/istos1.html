@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head><title> Δημιουργία φόρμας συλλογής στοιχείων </title>
+<link rel="stylesheet" type="text/css" href="css_erg.css" >
+</head>
+<body>
+  <form>
+  <table>
+    <th colspan="2">Φόρμα Επικοινωνίας</th>
+    <tr>
+      <td> <strong>Ονοματεπώνυμο* </strong></td>
+      <td><input type="text" name="name" id="nam"></td>
+    </tr>
+    <tr>
+      <td><strong>Τηλέφωνο</strong></td>
+      <td><input type="text" name="number" id="num"></td>
+    </tr>
+    <tr>
+      <td><strong>E-mail*</strong></td>
+      <td><input type="email" name="mail" id="mai"></td>
+    </tr>
+    <tr>
+      <td><strong>Αίτημα,<br>Ερώτημα</strong></td>
+      <td><textarea name="addr" rows="10" cols="30" id="quest" ></textarea></td>
+    </tr>
+    <tr> <td> <em> Τα πεδία με * είναι υποχρεωτικά </em> </td> </tr>
+    <tr> <td> <input type="submit" value="Αποστολή" id="sum" onclick="sav()">  <input type="reset" value="Τροποποίηση"></td> </tr>
+  </table>
+  </form>
+</body>
+<script>
+function em(name,values){
+    if (values==""){
+        window.alert("Το πεδιο "+name+" ειναι κενο");
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+function sav(){
+    var emailValue;
+    var phoneValue;
+    var nameValue;
+    var questValue;
+    emailValue=document.getElementById('mai').value;
+    phoneValue=document.getElementById('num').value;
+    nameValue=document.getElementById('nam').value;
+    questValue=document.getElementById('quest').value;
+    var check1=em("email",emailValue);
+    var check3=em("Ονοματεπώνυμο",nameValue);
+    if (check1==false && check3==false){
+        localStorage.setItem("emailV",emailValue);
+        localStorage.setItem("phoneV",phoneValue);
+        localStorage.setItem("nameV",nameValue);
+        localStorage.setItem("questV",questValue);
+        window.open('confirm.html');
+    }
+}
+ </script>
+</html>

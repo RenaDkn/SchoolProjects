@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+<link rel="stylesheet" type="text/css" href="css/lista.css">
+<title> Δημιουργία φόρμας συλλογής στοιχείων </title>
+<style>
+  body{
+    background-color:whitesmoke;
+    color:Green;
+  }
+  div{
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    font-size: 35px;
+
+  }
+  </style>
+</head>
+<body>
+  <h1> Γιαννης Αντετοκούνμπο</h1>
+  <!--ftiaxnume menou epilogwn-->
+  <ul>
+    <li><a  href="geniki.html">Home</a></li>
+    <li><a class="active" href="istos1.html">Contact</a></li>
+    <li><a href="eshop.html">E-shop</a></li>
+
+  </ul>
+  <div>
+  <form>
+  <table>
+    <th colspan="2">Φόρμα Επικοινωνίας</th>
+    <tr>
+      <td> <strong>Ονοματεπώνυμο </strong></td>
+      <td><input type="text" name="name" id="nam"></td>
+    </tr>
+    <tr>
+      <td><strong>E-mail</strong></td>
+      <td><input type="email" name="mail" id="mai"></td>
+    </tr>
+    <tr>
+      <td><strong>σχόλιο/μήνυμα</strong></td>
+      <td><textarea name="addr" rows="10" cols="30" id="quest" ></textarea></td>
+    </tr>
+    
+    <tr> <td> <input type="submit" value="Αποστολή" id="sum" onclick="send()">  <input type="reset" value="Τροποποίηση"></td> </tr>
+  </table>
+  </form>
+  </div>
+  
+</body>
+<script>
+  /*elegxei ean ola ta pedia exun periexomeno, 
+  ean to onoma periexei arithmus kai 
+  ean to mail exei swsth morfh.
+  Ean olataparapanw leiturgun ortha anigei thn efarmogh mail me etima ta dedomena k to email tu basketbolista
+  alliws emfanizei minima lathus kai den anigi tin efarmogh email*/
+function send(){
+    var body1;
+    var body2;
+    var body3;
+    sender="GiannisAdetokumbo@gmail.com";
+   body1=document.getElementById('nam').value;
+   body2=document.getElementById('mai').value;
+   body3=document.getElementById('quest').value;
+   if (body1=="" ){
+        window.alert("Το πεδιο "+"Ονοματεπώνυμο"+" ειναι κενο και δεν πρέπει να περιέχει αριθμούς.");
+    }
+    else if( hasNumber(body1)){
+      window.alert("Το πεδιο "+"Ονοματεπώνυμο"+" δεν πρέπει να περιέχει αριθμούς.");
+    }
+    else if(body2==""){
+        window.alert("Το πεδιο "+"Email"+" ειναι κενο");
+    }
+    else if(!validateEmail(body2)){
+        window.alert("Το πεδίο "+"Email"+" δεν έχει σωστή μορφή");
+    }
+    else if(body3==""){
+        window.alert("Το πεδιο "+"σχολιο/μήνυμα"+" ειναι κενο");
+    }
+    else{
+      window.location.href="mailto:"+"email: "+sender+" ,"+"?subject=Αιτημα&body="+"Ονοματεπώνυμο: "+body1+", σχόλιο/μήνυμα: "+body3; 
+    }
+}
+/*elegxei eanexei mesa estw k enan arithmo to name */
+function hasNumber(myString) {
+  return /\d/.test(myString);
+}
+/* elegxei thn morfh tu email*/
+function validateEmail(email) {
+    var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    return expr.test(email);
+}
+</script>
+</html>

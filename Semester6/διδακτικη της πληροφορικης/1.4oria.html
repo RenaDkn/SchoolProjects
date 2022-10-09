@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table {
+                border:solid blue;
+            }
+            td {
+                padding: 12px;
+            }
+            #answer1{
+                visibility: hidden;
+            }
+            #q2{
+                visibility: hidden;
+            }
+            #button2{
+                visibility: hidden;
+            }
+            #answer2{
+                visibility: hidden;
+            }
+            #q3{
+                visibility: hidden;
+            }
+            #button3{
+                visibility: hidden;
+            }
+            #answer3{
+                visibility: hidden;
+            }
+            #button4{
+                visibility: hidden;
+            }
+            
+        </style>
+        <link rel="stylesheet" typr="text/css" href="css/stylemenu.css">
+    </head>
+    <body>
+        <h1>1.4 ΟΡΙΟ ΣΥΝΑΡΤΗΣΗΣ ΣΤΟ  x0 ϵ R</h1>
+        
+          <ul>
+            <li><a  href="MainPage.html">Αρχική σελίδα</a></li>
+            <li><a class="active" href="1.4oria.html">1.4 ΟΡΙΟ ΣΥΝΑΡΤΗΣΗΣ ΣΤΟ  x0 ϵ R</a></li>
+            <li><a href="1.5oria.html">1.5 ΙΔΙΟΤΗΤΕΣ ΤΩΝ ΟΡΙΩΝ</a></li>
+            <li><a href="1.6oria.html">1.6 ΜΗ ΠΕΠΕΡΑΣΜΕΝΟ ΟΡΙΟ ΣΤΟ x0 ϵ R</a></li>
+            <li><a href="1.7oria.html">1.7 OΡΙΑ ΣΥΝΑΡΤΗΣΗΣ ΣΤΟ ΑΠΕΙΡΟ</a></li>
+          </ul>  
+        <h3>Ερωτηματολόγιο</h3><br>
+        <p>Επιλέξτε την απάντηση που θεωρείτε σωστή και πατήστε το κουμπί που λέει "Eπιλογή" για να σας εμφανιστεί η απάντηση και η επόμενη ερώτηση!</p>
+        <p>Στο τέλος όλων των ερώτήσεων θα σας εμφανιστεί το σκόρ σας!</p>    
+        <br><br>
+        <!--Ερωτηση 1 -->
+        <h4>Ερώτηση 1</h4>
+        <img src="images/fx.png" alt="fx">
+        <p id="q1">Η συνάρτηση αυτή έχει πεδίο ορισμού το σύνολο Df = R−{1}.Πως γράφεται;</p>
+          <input type="radio" id="f1" name="f(x)" value="f(x)=(x^2-1)/x-1">
+          <label for="f1">f(x)=x^2-1/x-1</label><br>
+          <input type="radio" id="f2" name="f(x)" value="f(x)=x-1/x^2-1">
+          <label for="f2">f(x)=(x-1)/x^2-1</label><br>
+          <input type="radio" id="f3" name="f(x)" value="f(x)=x-1">
+          <label for="f3">f(x)=x-1</label>
+        <p id=button1 class="shape1">
+            <button onclick="button1()">Επιλογή</button>
+        </p>
+        <!--Απάντηση 3 -->
+        <p id="answer1">Η σωστή απάντηση είναι f(x)=x^2-1/x-1! με x διάφορο του 1!<br><br>
+            <video id="myVid" width="320" height="240" controls>
+                <source src="images/video1.mp4" type="video/mp4">  
+            Your browser does not support the video tag.
+            </video>\
+            <br>
+            Επομένως, η γραφική της παράσταση είναι η ευθεία y =x + 1 με εξαίρεση το σημείο A(1,2)!<br>
+            "Καθώς το x, κινούμενο με οποιονδήποτε τρόπο πάνω στον άξονα  xʹx, προσεγγίζει τον πραγματικό αριθμό 1, το  f(x), κινούμενο πάνω στον άξονα  yʹy,προσεγγίζει τον πραγματικό αριθμό 2.
+            Και μάλιστα, οι τιμές  f(x) είναι τόσο κοντά στο 2 όσο θέλουμε, για όλα τα x ≠ 1 που είναι αρκούντως κοντά στο 1".
+            <br>
+            <img src="images/a1.png" alt="fx">
+        </p>
+        <br>
+            <!--Ερωτηση 2 -->
+            <h4>Ερώτηση 2</h4>
+            <p id="q2">Όταν οι τιμές μιας συνάρτησης f προσεγγίζουν όσο θέλουμε έναν πραγματικό αριθμό ℓ, καθώς το x προσεγγίζει με οποιονδήποτε τρόπο τον αριθμό x0, τότε γράφουμε
+            <br>
+            <img src="images/fx.png" alt="fx">
+            <br>
+            και διαβάζουμε: <br>
+            <input type="radio" id="g1" name="f(x)" value="an1">
+            <label for="f1">"το όριο της  f(x), όταν το x τείνει στο x0 , είναι ℓ "</label><br>
+            <input type="radio" id="g2" name="f(x)" value="an2">
+            <label for="f2">"το όριο της  f(x) στο x είναι ℓ </label><br>
+            <p id=button2 class="shape1">
+                <button onclick="button2()">Επιλογή</button>
+            </p>
+        </p>
+        <!--Απάντηση 2 -->
+        <p id="answer2">Η σωστή απάντηση είναι "το όριο της  f(x), όταν το x τείνει στο x0 , είναι ℓ "  ή "το όριο της  f(x) στο x0 είναι ℓ ".</p>
+        <br>
+        <!--Ερωτηση 3 -->
+        <h4>Ερώτηση 3</h4>
+        <p id="q3"> <img src="images/q3.png" alt="iq3"><br>
+            Από τα παραπάνω σχήματα παρατηρούμε ότι:<br>
+            — Για να αναζητήσουμε το όριο της f στο x0, πρέπει η f να ορίζεται όσο θέλουμε "κοντά στο x0", δηλαδή η f να είναι ορισμένη σ' ένα σύνολο της μορφής<br>
+                    (α, x0) ∪ (x0, β)    ή    (α, x0)    ή    (x0, β).<br>
+                — Το x0 μπορεί να ανήκει στο πεδίο ορισμού της συνάρτησης (Σχ. 39α, 39β) ή να μην ανήκει σ' αυτό (Σχ. 39γ).<br>
+                — Η τιμή της f στο x0, όταν υπάρχει, μπορεί να είναι ίση με το όριό της στο x0 (Σχ. 39α) ή διαφορετική από αυτό. (Σχ. 39β).
+            
+            <br><br><br>
+            Έστω, τώρα, η συνάρτηση:
+            <img src="images/q3.2.png" alt="iq32"><br>
+            της οποίας η γραφική παράσταση αποτελείται από τις ημιευθείες του  σχήματος:<br>
+            <img src="images/q3.3.png" alt="iq33"><br>
+            Παρατηρούμε ότι:<br>
+            Όταν το x προσεγγίζει το 1 από αριστερά ,τότε οι τιμές της f προσεγγίζουν όσο θέλουμε τον πραγματικό αριθμό 2. Στην περίπτωση αυτή γράφουμε: <br>
+            <input type="radio" id="h1" name="f(x)" value="an1">
+            <label for="f1"><img src="images/q3.an1.png" alt="an1"></label><br>
+            <input type="radio" id="h2" name="f(x)" value="an2">
+            <label for="f2"><img src="images/q3.an2.png" alt="an2"></label><br>
+        </p>
+        <p id=button3 class="shape1">
+            <button onclick="button3()">Επιλογή</button>
+        </p>
+        <!--Απάντηση 3 -->
+        <p id="answer3"> Όταν το x προσεγγίζει το 1 από αριστερά (x < 1 ) , τότε οι τιμές της f προσεγγίζουν όσο θέλουμε τον πραγματικό αριθμό 2. Στην περίπτωση αυτή γράφουμε:<br>
+            <img src="images/a3.1.png" alt="a3.1"><br>
+            Οταν το x προσεγγίζει το 1 από δεξιά (x>1), τότε οι τιμές της f προσεγγίζουν όσο θελουμε τον πραγματικό αριθμό 4. Στην περίπτωση αυτή γράφουμε:<br>
+            <img src="images/a3.2.png" alt="a3.2">
+        </p>
+        <p id=button4 class="shape1">
+            <button onclick="button4()">Εμφάνιση σκόρ</button>
+        </p>
+    </body>
+    <script>
+        let count = 0;
+        function button1(){
+            var x = 0;
+            if (document.getElementById("f1").checked){
+                alert("Σωστή απάντηση!");
+                x = 1;
+                count++;
+            }else if(document.getElementById("f2").checked){
+                alert("Λάθος απάντηση!");
+                 x= 1;
+            }else if(document.getElementById("f3").checked){
+                alert("Λάθος απάντηση!");
+                x= 1;
+            }else{
+                alert("Παρακαλώ επιλέξτε μία απάντηση!");
+            }
+            if (x==1){
+                document.getElementById("answer1").style.visibility = "visible";
+                document.getElementById("q2").style.visibility = "visible";
+                document.getElementById("button1").style.visibility = "hidden";
+                document.getElementById("button2").style.visibility = "visible";
+            }
+
+        }
+        function button2(){
+            var x = 0;
+            if (document.getElementById("g1").checked){
+                alert("Σωστή απάντηση!");
+                x = 1;
+                count++;
+            }else if(document.getElementById("g2").checked){
+                alert("Λάθος απάντηση!");
+                 x= 1;
+            }
+            else{
+                alert("Παρακαλώ επιλέξτε μία απάντηση!");
+            }
+            if (x==1){
+                document.getElementById("answer2").style.visibility = "visible";
+                document.getElementById("q3").style.visibility = "visible";
+                document.getElementById("button2").style.visibility = "hidden";
+                document.getElementById("button3").style.visibility = "visible";  
+            }
+        }
+        function button3(){
+            var x = 0;
+            if (document.getElementById("h1").checked){
+                alert("Λάθος απάντηση!");
+                 x = 1;
+            }else if(document.getElementById("h2").checked){
+                alert("Σωστή απάντηση!");
+                x = 1;
+                count++;
+            }
+            else{
+                alert("Παρακαλώ επιλέξτε μία απάντηση!");
+            }
+            if (x==1){
+                document.getElementById("button3").style.visibility = "hidden";
+                document.getElementById("button4").style.visibility = "visible";  
+                document.getElementById("answer3").style.visibility = "visible";
+                document.getElementById("q4").style.visibility = "visible";
+                
+            }
+        }
+        function button4(){
+            alert(count);
+
+        }
+    </script>
+
+</html>

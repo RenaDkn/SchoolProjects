@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css_erg2.css" >
+    <title>Στοιχεία δικτυου</title>
+	<style>
+		body {background-color: pink;}
+	    
+	</style>
+  </head>
+  <body class='body'>
+    <form name="myForm">
+    <p style="background-color:lightyellow;"> <strong>Διεύθυνση IPv4</strong> (Υπολογιστής ή Δίκτυο) <strong>Μάσκα Δικτύου</strong><br>  
+    <input type="text" name="IP" placeholder="192.100.10.192"  id="ipen">  
+    <input type="text" name="mask" placeholder="255.255.255.0 " id="masken" ><br><br>
+    <input type="button" value="Υπολογισμος" id="click"> 
+    <input type="reset" value="Καθαρισμός"> 
+	</p>
+    </form>
+    <p></p>
+    </body>
+  <script>
+      function apot(a){
+              function cSO(){
+                  var smth=document.createElement("p");
+                  document.body.appendChild(smth);
+                  smth.style.backgroundColor="lightyellow";
+                  smth.style.width="auto";
+                  smth.style.height="auto";
+                  smth.style.fontSize="25px";
+                  return smth;
+              }
+              function zero(list){
+                for(var i =0;i<list.length;i++){
+                  while(list[i].length<8){
+                    list[i]=0+list[i];
+                  }
+                }
+    
+              }
+              function convert(list){
+                var listcon=[];
+                for(var i=0;i<list.length;i++){
+                  
+                  listcon[i]=String(parseInt(list[i]).toString(2));
+    
+                }
+                zero(listcon);
+                return String(listcon[0])+"."+String(listcon[1])+"."+String(listcon[2])+"."+String(listcon[3]);
+    
+              }
+              var ip_entry=document.getElementById("ipen").value;
+              var mask_entry=document.getElementById("masken").value;
+              if(ip_entry==""||mask_entry==""){
+                  alert("ΕΝΑ ΑΠΟ ΤΑ ΠΕΔΙΑ ΕΙΝΑΙ ΚΕΝΑ");
+                  return 0;
+              }
+              var ip_list=ip_entry.split(".");
+              var mask_list=mask_entry.split(".");
+              var classs="";
+              if(parseInt(ip_list[0])<128){
+                classs="A";
+              }
+              else if(parseInt(ip_list[0]<192)){
+                classs="B";
+              }
+              else if(parseInt(ip_list[0])<224){
+                classs="C";
+              }
+              else if(parseInt(ip_list[0])<240){
+                classs="D";
+              }
+              else if(parseInt(ip_list[0])<256){
+                classs="E";
+              }
+              for(var i=0;i<ip_list.length;i++){
+                if(parseInt(ip_list[i])>255){
+                  alert("ενα στοιχειο ξεπερνα το 255");
+                  return 0;
+                }
+              }
+              for(var i=0;i<mask_list.length;i++){
+                if(parseInt(mask_list[i])>255){
+                  alert("ενα στοιχειο ξεπερνα το 255");
+                  return 0;
+                }
+              }
+              var parag=cSO(); 
+              var conip=convert(ip_list);
+              var conmask=convert(mask_list);
+              var count=0;
+              var use="";
+              for(var i=0;i<conmask.length;i++){
+                for(var j=0;j<conmask[i].length;j++){
+                  if(conmask[i][j]=="1"){
+                      count++;
+                      use+=conip[i][j];
+                  }
+                }
+              }
+              while(use.length<32){
+                  use+="1";
+              }
+              var host_ip="";
+              var ar=0;
+              for(var i=0;i<use.length;i++){
+                host_ip+=use[i];
+                ar++;
+                if(ar%8==0){
+                  host_ip+=".";
+                }
+              }
+              var pc_in_net=(2**(32-count));
+              var net_ip=String(parseInt(ip_list[0])&parseInt(mask_list[0]))+"."+String(parseInt(ip_list[1])&parseInt(mask_list[1]))+"."+String(parseInt(ip_list[2])&parseInt(mask_list[2]))+"."+String(parseInt(ip_list[3])&parseInt(mask_list[3]));
+              parag.innerHTML+="ip στο δυαδικο σύστημα:"+conip+"<br>";
+              parag.innerHTML+="Mασκα στο δυαδικό σύστημα :"+conmask+"<br>";
+              parag.innerHTML+="Διεύθυνση δικτύου  :"+net_ip+"<br>";
+              parag.innerHTML+="Αριθμός υπολογιστών στο δίκτυο  :"+String(pc_in_net)+"<br>";
+              parag.innerHTML+="Μεγαλύτερη διεύθυνση :"+host_ip+"<br>";
+              parag.innerHTML+="Κλάση/τάξη διεύθυνσης Ip  :"+classs;
+    }
+    document.getElementById("click").onmousedown=apot;
+    </script>
+</html>

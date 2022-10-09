@@ -1,0 +1,11 @@
+C:\Users\Rena Dikonimaki\source\repos\Project2Aleph\Project2Aleph\bin\Debug\Project2Aleph.exe.config
+C:\Users\Rena Dikonimaki\source\repos\Project2Aleph\Project2Aleph\bin\Debug\Project2Aleph.exe
+C:\Users\Rena Dikonimaki\source\repos\Project2Aleph\Project2Aleph\bin\Debug\Project2Aleph.pdb
+C:\Users\Rena Dikonimaki\source\repos\Project2Aleph\Project2Aleph\obj\Debug\Project2Aleph.csprojAssemblyReference.cache
+C:\Users\Rena Dikonimaki\source\repos\Project2Aleph\Project2Aleph\obj\Debug\Project2Aleph.Form1.resources
+C:\Users\Rena Dikonimaki\source\repos\Project2Aleph\Project2Aleph\obj\Debug\Project2Aleph.Properties.Resources.resources
+C:\Users\Rena Dikonimaki\source\repos\Project2Aleph\Project2Aleph\obj\Debug\Project2Aleph.csproj.GenerateResource.cache
+C:\Users\Rena Dikonimaki\source\repos\Project2Aleph\Project2Aleph\obj\Debug\Project2Aleph.csproj.CoreCompileInputs.cache
+C:\Users\Rena Dikonimaki\source\repos\Project2Aleph\Project2Aleph\obj\Debug\Project2Aleph.exe
+C:\Users\Rena Dikonimaki\source\repos\Project2Aleph\Project2Aleph\obj\Debug\Project2Aleph.pdb
+C:\Users\Rena Dikonimaki\source\repos\Project2Aleph\Project2Aleph\obj\Debug\Project2Aleph.Form2.resources

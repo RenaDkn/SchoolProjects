@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Φόρμα στοιχείων </title>
+        <style>
+            body
+            {
+                background-color:lightpink;
+                color:#fcf896;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="ena" action="ergasia6.php" method="post">
+            Username <input type="text"  name="un"> <br><br>
+            Password <input type="password" name="pw"> <br><br>
+            Ονοματεπώνυμο <input type="text" name="nam"> <br><br>
+            E-mail <input type="email" name="mail"> <br><br>
+            Ηλικία <select name="age">
+                <option>Μέχρι 17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20 και πάνω</option>
+            </select>  <br><br>
+            Ημερομηνίαγέννησης <input type="date" name="hg"> <br><br>
+            Διεύθυνση <input type="text" name="ad"> <br><br>
+            Τρόπος  πληρωμής:<br> 
+            <input type="radio" name="payment" value="adikatavoli"> Αντικαταβολή <br>
+            <input type="radio" name="payment" value="xrewstiki"> Χρεωστική κάρτα <br>
+            <input type="radio" name="payment" value="pistwtiki"> Πιστωτική κάρτα <br>
+            <br><br>
+            Σχόλια <textarea name="sxolio"></textarea> <br><br>
+            <input type="submit" value="Kαταχώρηση κράτησης">
+        </form>
+        <br><br><br><br><br><br>
+        <form id="duo" action="ergasia62.php" method="post">
+            <input type="submit" value="αναζήτηση χρηστών">
+            email: <input type="email" name="sm">
+            username: <input type="text" name="su">
+
+        </form>
+
+    </body>
+
+</html>

@@ -1,0 +1,5 @@
+Κωδικος  Ονομα  ομοταξία    Βάρος  Ηλικία
+0        lion   thilastiko  250    12       
+1        papia  ptino       5      10
+2        tigrh  thilastiko  150    30
+3        fidi   erpeto      50     40

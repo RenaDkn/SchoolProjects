@@ -1,0 +1,85 @@
+%Zaunfamily
+male(vander).
+male(mylo).
+male(claggor).
+female(sarah).
+female(violet).
+female(powder).
+married(vander,sarah).
+father(vander,powder).
+father(vander,violet).
+father(vander,mylo).
+father(vander,claggor).
+mother(sarah,powder).
+mother(sarah,violet).
+mother(sarah,mylo).
+mother(sarah,claggor).
+birthday(vander,26,1,1970).
+birthday(sarah,21,4,1975).
+birthday(powder,15,2,2001).
+birthday(violet,18,1,1999).
+birthday(mylo,11,2,2009).
+birthday(claggor,5,7,2004).
+works(vander,ld,15000).
+works(sarah,bbc,15500).
+works(powder,_,_).
+works(violet,intel,13000).
+works(mylo,_,_).
+works(claggor,_,_).
+family(person(vander,zaun,birthday(vander,26,1,1970),works(vander,ld,15000)),person(sarah,zaun,birthday(sarah,21,4,1975),works(sarah,bbc,15500)),[person(powder,zaun,birthday(powder,15,2,2001),works(powder,_,_)),person(violet,zaun,birthday(violet,18,1,1999),works(violet,intel,13000)),person(mylo,zaun,birthday(mylo,11,2,2009),works(mylo,_,_)),person(claggor,zaun,birthday(claggor,5,7,2004),works(claggor,_,_))]).
+children([person(powder,zaun,birthday(powder,15,2,2001),works(powder,_,_)),person(violet,zaun,birthday(violet,18,1,1999,works(violet,intel,13000))),person(mylo,zaun,birthday(mylo,11,2,2009),works(mylo,_,_)),person(claggor,zaun,birthday(claggor,5,7,2004),works(claggor,_,_))]).
+%Demaciafamily
+male(jarvan).
+male(garen).
+female(tiana).
+female(lux).
+married(jarvan,tiana).
+father(jarvan,garen).
+father(jarvan,lux).
+mother(tiana,garen).
+mother(tiana,lux).
+birthday(jarvan,6,10,1980).
+birthday(tiana,11,12,1983).
+birthday(garen,3,3,2005).
+birthday(lux,28,8,2010).
+works(jarvan,bbc,17000).
+works(tiana,riot,16500).
+works(garen,_,_).
+works(lux,_,_).
+family(person(jarvan,demacia,birthday(jarvan,6,10,1980),works(jarvan,bbc,17000)),person(tiana,demacia,birthday(tiana,11,12,1983),works(tiana,riot,16500)),[person(garen,demacia,birthday(garen,3,3,2005),works(garen,_,_)),person(lux,demacia,birthday(lux,28,8,2010),works(lux,_,_))]).
+children([person(garen,demacia,birthday(garen,3,3,2005),works(garen,_,_)),person(lux,demacia,birthday(lux,28,8,2010),works(lux,_,_))]).
+%Pitloverfamily
+male(heimer).
+male(jayce).
+female(camile).
+female(caitlyn).
+female(seraphine).
+married(heimer,camile).
+father(heimer,seraphine).
+father(heimer,jayce).
+father(heimer,caitlyn).
+mother(camile,seraphine).
+mother(camile,jayce).
+mother(camile,caitlyn).
+birthday(heimer,16,5,1950).
+birthday(camile,11,12,1955).
+birthday(seraphine,28,8,1979).
+birthday(jayce,7,9,1980).
+birthday(caitlyn,28,8,1987).
+works(heimer,_,_).
+works(camile,_,_).
+works(seraphine,microsoft,18000).
+works(jayce,amazon,19000).
+works(caitlyn,apple,20000).
+family(person(heimer,pitlover,birthday(heimer,16,5,1950),works(heimer,_,_)),person(camile,pitlover,birthday(camile,11,12,1955),works(camile,_,_)),[person(seraphine,pitlover,birthday(seraphine,28,8,1979),works(seraphine,microsoft,18000)),person(jayce,pitlover,birthday(jayce,7,9,1980),works(jayce,amazon,19000)),person(caitlyn,pitlover,birthday(caitlyn,28,8,1987),works(caitlyn,apple,20000))]).
+children([person(seraphine,pitlover,birthday(seraphine,28,8,1979),works(seraphine,microsoft,18000)),person(jayce,pitlover,birthday(jayce,7,9,1980),works(jayce,amazon,19000)),person(caitlyn,pitlover,birthday(caitlyn,28,8,1987),works(caitlyn,apple,20000))]).
+%rules
+family(X,Y,[]).
+mothers_of_3(X) :-
+	family(_,X,CHILDREN),
+	length(CHILDREN,B),
+	B>=3.
+families_of_3(X,Y,CHILDREN) :-
+	family(X,Y,CHILDREN),
+	length(CHILDREN,C),
+	C>=3.

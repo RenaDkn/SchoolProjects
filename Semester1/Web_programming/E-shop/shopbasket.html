@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>geniki ergasia</title>
+        <meta charset="utf-8">
+        <style>
+            body{
+                background-color:lightslategrey;
+                color: lavenderblush;
+            }
+            form{
+                width:300px; 
+                color:whitesmoke
+            }
+            /* kati aorato to periexomeno tu div */
+            div{
+                display:none;
+            }
+        </style>
+    </head>
+    <body onload="Items()">
+        <h1> Γιαννης Αντετοκούνμπο</h1>
+        <form id="ena" action="genikisql.php" method="post">
+            <div id="krifo" >
+                <input type="text" id="p11" name="p11" > 
+                <input type="text" id="p12" name="p12">
+                <input type="text" id="p13" name="p13">
+                <input type="text" id="p14" name="p14">
+                <input type="text" id="p15" name="p15">
+            </div>
+            Ονοματεπώνυμο <input type="text" name="nam" id="nam"> <br><br>
+        
+          <!--<input type="button" value="Αγορά" onclick="f2()">-->
+          
+          E-mail <input type="email" name="mail" id="mail"> <br><br>
+          Size <select name="size" id="size">
+            <option>xs</option>
+            <option>s</option>
+            <option>m</option>
+            <option>l</option>
+            <option>xl</option>
+            <option>xxl</option>
+            </select>  <br><br>
+            Διεύθυνση <input type="text" name="ad" id="ad"> <br><br>
+            Τρόπος  πληρωμής:<br> 
+            <input type="radio" name="payment" id="payment" value="adikatavoli"> Αντικαταβολή <br>
+            <input type="radio" name="payment" id="payment" value="xrewstiki"> Χρεωστική κάρτα <br>
+            <input type="radio" name="payment" id="payment" value="pistwtiki"> Πιστωτική κάρτα <br>
+            <br><br>
+            Σχόλια <textarea name="sxolio"></textarea> <br><br>
+           
+            <input type="submit" value="Αγορά">
+        </form>
+        <p id="pr1"></p> 
+          <p id="pr2"></p> 
+          <p id="pr3"></p>
+          <p id="pr4"></p>
+          <p id="pr5"></p>
+        <br><br>
+        <a href="geniki.html">Επιστροφή στο HOMEPAGE</a>
+    </body>
+    <script>
+        function Items(){ 
+        var Q1;
+        var Q2;
+        var Q3;
+        var Q4;
+        var P5;
+        Q1=localStorage.getItem("qu1");
+        Q2=localStorage.getItem("qu2");
+        Q3=localStorage.getItem("qu3");
+        Q4=localStorage.getItem("qu4");
+        P5=localStorage.getItem("p5");
+        document.getElementById('pr1').innerHTML="Merch1 ποσότητα:"+Q1+" "+"Τιμή:"+Q1*10;
+        document.getElementById('pr2').innerHTML="Merch2 ποσότητα:"+Q2+" "+"Τιμή:"+Q2*10;
+        document.getElementById('pr3').innerHTML="Merch3 ποσότητα:"+Q3+" "+"Τιμή:"+Q3*20;
+        document.getElementById('pr4').innerHTML="Merch4 ποσότητα:"+Q4+" "+"Τιμή:"+Q4*20;
+        document.getElementById('pr5').innerHTML="Συνολική τιμή:"+P5;
+        document.getElementById('p11').value=Q1;
+        document.getElementById('p12').value=Q2;
+        document.getElementById('p13').value=Q3;
+        document.getElementById('p14').value=Q4;
+        document.getElementById('p15').value=P5;
+        }
+        Items()
+    </script>
+</html>

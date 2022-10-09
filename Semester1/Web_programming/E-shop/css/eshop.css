@@ -1,0 +1,36 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+  
+.price {
+    color: white;
+    font-size: 22px;
+  }
+  
+.card input {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color:whitesmoke;
+    background-color:red;
+    text-align: center;
+    cursor: pointer;
+    width: 75%;
+    font-size: 18px;
+}
+  
+.card input:hover {
+    opacity: 0.7;
+}
+body{
+    background-color: lavenderblush;
+    color:lightslategrey;
+}
+div{
+    background-color:grey;
+    color:honeydew;
+}

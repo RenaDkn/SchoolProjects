@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head><title> Δημιουργία φόρμας συλλογής στοιχείων </title>
+<link rel="stylesheet" type="text/css" href="css_erg.css" >
+</head>
+<body>
+  <form>
+  <table>
+      <th colspan="2">Επαλήθευση στοιχείων</th>
+      <tr>
+        <td id="name"> <strong>Ονοματεπώνυμο*: </strong></td>
+      </tr>
+      <tr>
+        <td id="phone"><strong>Τηλέφωνο: </strong></td>
+      </tr>
+      <tr>
+        <td id="email"><strong>E-mail*:</strong></td>
+      </tr>
+      <tr>
+        <td id="quest"><strong>Αίτημα, Ερώτημα:</strong></td>
+      </tr>
+  </table>
+</body>
+<script>
+  
+  function setValues(){ 
+   
+   var settingemail;
+   var settingphone;
+   var settingname;
+   var settingquest;
+  
+   settingemail=localStorage.getItem("emailV");
+   settingphone=localStorage.getItem("phoneV");
+   settingname=localStorage.getItem("nameV");
+   settingquest=localStorage.getItem("questV");
+   document.getElementById('name').innerHTML="Ονοματεπώνυμο: "+settingname;
+   document.getElementById('phone').innerHTML="Τηλέφωνο: "+settingphone;
+   document.getElementById('email').innerHTML="Email: "+settingemail;
+   document.getElementById('quest').innerHTML="Αιτημα ερωτημα: "+settingquest;
+}
+function send(){ 
+   var sender;
+   var body1;
+   var body2;
+   var body3;
+   sender=localStorage.getItem("emailV");
+   body1=localStorage.getItem("nameV");
+   body2=localStorage.getItem("phoneV");
+   body3=localStorage.getItem("questV");
+   window.location.href="mailto:"+"email: "+sender+" ,"+"?subject=Αιτημα&body="+"Ονοματεπώνυμο: "+body1+", Τηλέφωνο: "+body2+", Αιτημα ερωτημα: "+body3;
+   localStorage.clear();
+}
+setValues();
+send();
+</script>
+
+</html>

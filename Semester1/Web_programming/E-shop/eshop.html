@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/lista.css">
+        <link rel="stylesheet" type="text/css" href="css/eshop.css">
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <h1> Γιαννης Αντετοκούνμπο</h1>
+        <!--ftiaxnume menu epilogwn-->
+        <ul>
+            <li><a  href="geniki.html">Home</a></li>
+            <li><a  href="istos1.html">Contact</a></li>
+            <li><a class="active" href="eshop.html">E-shop</a></li>
+
+          </ul>
+          <h2>Σελίδα αγοράς αναμνηστικών!</h2>
+        <!--e-shop-->
+        <form>
+        <div class="card">
+            <img src="images/anam1.jpg" alt="T-shirt" style="width:100%">
+            <h1 id="m1">Red merch</h1>
+            <p class="price" id="p1">10</p>
+            <p>Some text about the shirt.</p>
+            
+            <p> 
+                Solid colors: 100% Cotton; Heather Red: 90% Cotton, 10% Polyester; All Other Heathers: 50% Cotton, 50% Polyester
+                Imported
+                Machine wash cold with like colors, dry low heat
+                by xkappax
+                Officially licensed by Portal 2; designed by For Fans By Fans.
+                Lightweight, Classic fit, Double-needle sleeve and bottom hem
+            </p>
+            <p>Quantity:</p>
+            <p><select name="count" id="q1">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select></p>
+        </div>
+        <div class="card" >
+            <img src="images/anam2.jpg" alt="T-shirt" style="width:100%">
+            <h1 id="m2">Green merch</h1>
+            <p class="price" id="p2">10</p>
+            <p>Some text about the t-shirt.</p>
+            
+            <p>
+                Solid colors: 100% Cotton; Heather Green: 90% Cotton, 10% Polyester; All Other Heathers: 50% Cotton, 50% Polyester
+                Imported
+                Machine wash cold with like colors, dry low heat
+                by xkappax
+                Officially licensed by Portal 2; designed by For Fans By Fans.
+                Lightweight, Classic fit, Double-needle sleeve and bottom hem
+            </p>
+            <p>Quantity:</p>
+            <p><select name="count" id="q2">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select></p>
+        </div>
+        <div class="card" >
+            <img src="images/anam3.jpg" alt="Hoodie" style="width:100%">
+            <h1 id="m3">Grey hoodie merch</h1>
+            <p class="price" id="p3">20</p>
+            <p>Some text about the hoodie.</p>
+            
+            <p>
+                Solid colors: 100% Cotton; Heather Green: 90% Cotton, 10% Polyester; All Other Heathers: 50% Cotton, 50% Polyester
+                Imported
+                Machine wash cold with like colors, dry low heat
+                by xkappax
+                Officially licensed by Portal 2; designed by For Fans By Fans.
+                Lightweight, Classic fit, Double-needle sleeve and bottom hem
+            </p>
+            <p>Quantity:</p>
+            <p><select name="count" id="q3">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select></p>
+        </div>
+        <div class="card" >
+            <img src="images/anam4.jpg" alt="Hoodie" style="width:100%">
+            <h1 id="m4">Green hoodie merch</h1>
+            <p class="price" id="p4">20</p>
+            <p>Some text about the hoodie.</p>
+            
+            <p>
+                Solid colors: 100% Cotton; Heather Black: 90% Cotton, 10% Polyester; All Other Heathers: 50% Cotton, 50% Polyester
+                Imported
+                Machine wash cold with like colors, dry low heat
+                by xkappax
+                Officially licensed by Portal 2; designed by For Fans By Fans.
+                Lightweight, Classic fit, Double-needle sleeve and bottom hem
+            </p>
+            <p>Quantity:</p>
+            <p><select name="count" id="q4">
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select></p>
+        </div>
+        <p class="card">
+        <input type="buttom" id="koubi" value="Shoppingbasket" onclick="main()" >
+        </p>
+        
+            <p id="pr1"></p> 
+            <p id="pr2"></p> 
+            <p id="pr3"></p>
+            <p id="pr4"></p>
+            <p id="pr5"></p>
+            <br><br>
+            <input type="button" value="Αγορά" onclick="f2()">
+        </form>
+    </body>
+    <script>
+        function main(){
+            
+            var qu1;
+            //pairnei thn timi apo thn idkaithn eisagei sthnantistixi metavliti
+            qu1=document.getElementById('q1').value;
+            localStorage.setItem("qu1",qu1);
+            var qu2;
+            //pairnei thn timi apo thn idkaithn eisagei sthnantistixi metavliti
+            qu2=document.getElementById('q2').value;
+            localStorage.setItem("qu2",qu2);
+            
+        
+            var qu3;
+            //pairnei thn timi apo thn idkaithn eisagei sthnantistixi metavliti
+            qu3=document.getElementById('q3').value;
+            localStorage.setItem("qu3",qu3);
+            var qu4;
+            //pairnei thn timi apo thn idkaithn eisagei sthnantistixi metavliti
+            
+            qu4=document.getElementById('q4').value;
+            localStorage.setItem("qu4",qu4);
+           var p5;
+           
+           p5=((qu1*10)+(qu2*10)+(qu3*20)+(qu4*20));
+           localStorage.setItem("p5",p5);
+            document.getElementById('pr1').innerHTML="Merch1 ποσότητα:"+qu1+" "+"Τιμή:"+qu1*10;
+            document.getElementById('pr2').innerHTML="Merch2 ποσότητα:"+qu2+" "+"Τιμή:"+qu2*10;
+            document.getElementById('pr3').innerHTML="Merch3 ποσότητα:"+qu3+" "+"Τιμή:"+qu3*20;
+            document.getElementById('pr4').innerHTML="Merch4 ποσότητα:"+qu4+" "+"Τιμή:"+qu4*20;
+            document.getElementById('pr5').innerHTML="Συνολική τιμή:"+p5;
+        }
+        function f2(){
+            window.open("shopbasket.html")
+        }
+    </script>
+</html>
